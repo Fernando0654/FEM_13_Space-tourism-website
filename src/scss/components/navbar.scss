@@ -1,0 +1,49 @@
+@use "../util/mixins" as mixin;
+
+header {
+  @include mixin.displayFlex(row, center, center);
+  width: 100%;
+  .logo {
+    width: 50%;
+    padding-left: 2em;
+    margin-top: 2em;
+    position: relative;
+    img {
+      width: 5%;
+    }
+    hr {
+        width: 90%;
+        position: absolute;
+        border: none;
+        border-bottom: 1px solid rgba(141, 123, 123, 0.494);
+        top: 20%;
+        right: -4%;
+        z-index: 4
+    }
+  }
+  .navbar {
+    @include mixin.displayFlex(row, center, flex-start);
+    width: 50%;
+    background-color: rgba(128, 109, 109, 0.254);
+    backdrop-filter: blur(10px);
+    margin-top: 2em;
+    li a{
+        display: block;
+        color: rgba(255, 255, 255, 0.849);
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        border-bottom: 2px solid transparent;
+        font-family: 'Barlow Condensed', sans-serif;
+        transition: 0.5s;
+        font-size: 1vw;
+        strong {
+            color: white;
+        }
+        &:hover {
+            border-bottom: 2px solid #fff;
+        }
+    }
+  }
+}

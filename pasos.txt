@@ -1,0 +1,7 @@
+1.- npm init
+2.- npm install "paqueterías necesarias"
+3.- crear src/index.js y src/components/App.js e index.html
+4.- agregar comando dev a package.json
+5.- configurar webpack y babel
+6.- correr npm run dev y empezar a armar componentes
+7.- componente landingpage

@@ -1,0 +1,40 @@
+// Barlow Condensed /regular - bold/
+
+// Bellefair
+
+// Barlow
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: 0.5s ease;
+}
+
+.main.destination {
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+}
+
+.main.crew {
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
+}
+
+.main.technology {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+}
