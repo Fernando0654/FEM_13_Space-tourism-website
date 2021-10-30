@@ -12,7 +12,7 @@ import "../scss/index.scss";
 const AppComponent = () => {
   const [destination, setDestination] = useState(null);
   const [crew, setCrew] = useState(null);
-  const [technology, setTechnology] = useState(null)
+  const [technology, setTechnology] = useState(null);
   const URL =
     "https://raw.githubusercontent.com/Fernando0654/FEM_1_Tip_Calculator/main/data_fem_13.json";
   useEffect(async () => {
@@ -26,10 +26,12 @@ const AppComponent = () => {
   const newClass = location.split("/")[1];
   return (
     <div className={"main " + newClass}>
-      <NavbarComponent />
-      <Route exact path="/" component={HomeComponent} />
+      <NavbarComponent currentRoute={newClass} />
+      <Route exact path="/">
+        <HomeComponent />
+      </Route>
       <Route path="/destination">
-        <DestinationComponent data={destination}/>
+        <DestinationComponent data={destination} />
       </Route>
       <Route path="/crew">
         <CrewComponent data={crew} />
