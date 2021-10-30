@@ -1,9 +1,9 @@
 import React from "react";
 
-const CrewComponent = () => {
+const CrewComponent = ({data}) => {
   return (
     <div className="crew">
-        <h1>Crew</h1>
+        <h1>{console.log(data)}</h1>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
 
-const TechComponent = () => {
+const TechComponent = ({data}) => {
   return (
     <div className="technology">
-        <h1>Technology</h1>
+        <h1>{console.log(data)}</h1>
     </div>
   );
 };

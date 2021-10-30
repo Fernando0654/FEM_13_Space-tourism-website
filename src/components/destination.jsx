@@ -1,9 +1,9 @@
 import React from "react";
 
-const DestinationComponent = () => {
+const DestinationComponent = ({data}) => {
   return (
     <div className="destination">
-        <h1>Destination</h1>
+        <h1>{console.log(data)}</h1>
     </div>
   );
 };

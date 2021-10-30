@@ -1,0 +1,73 @@
+@use "../util/mixins" as mixin;
+.home {
+  @include mixin.displayFlex(row, center, flex-end);
+  min-height: 80vh;
+  .title-home,
+  .button-explore {
+    width: 50%;
+    min-height: 80vh;
+  }
+  .title-home {
+    @include mixin.displayFlex(column, center, flex-end);
+    h1,
+    p {
+      display: block;
+      width: 50%;
+      color: lavender;
+    }
+    h1 {
+      .title {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: lighter;
+        font-size: 1.7vw;
+        -webkit-text-stroke: black;
+        color: rgba(255, 255, 255, 0.905);
+      }
+      .subtitle {
+        display: block;
+        font-family: "Bellefair", serif;
+        font-weight: lighter;
+        font-size: clamp(1.5rem, 6vw, 6rem);
+        color: #fff;
+      }
+    }
+    p {
+      margin-bottom: 15%;
+      font-family: "Barlow", sans-serif;
+      font-weight: lighter;
+      font-size: 1vw;
+      color: rgba(230, 230, 250, 0.898);
+      line-height: 1.8;
+    }
+  }
+  .button-explore {
+    position: relative;
+    .btn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 20%;
+      right: 30%;
+      width: 120px;
+      height: 120px;
+      background-color: #fff;
+      padding: 2em;
+      border-radius: 150px;
+      cursor: pointer;
+      transition: 0.5s;
+      a {
+        display: block1;
+        width: 100%;
+        font-family: "Bellefair", serif;
+        font-size: clamp(1rem, 1.3vw, 4rem);
+        text-align: center;
+        color: #000;
+      }
+      &:hover {
+          transform: scale(1.25);
+          box-shadow: 0px 0px 15px rgb(255, 255, 255);
+      }
+    }
+  }
+}
