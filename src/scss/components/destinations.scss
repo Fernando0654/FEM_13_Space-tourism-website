@@ -1,0 +1,11 @@
+@use "../util/mixins" as mixin;
+.destination {
+    .title-img {
+        width: 50%;
+    }
+    .wrapper-slider {
+        @include mixin.displayFlex(column, center, center);
+        width: 50%;
+        color: #fff;
+    }
+}

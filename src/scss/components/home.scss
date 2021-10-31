@@ -1,7 +1,5 @@
 @use "../util/mixins" as mixin;
 .home {
-  @include mixin.displayFlex(row, center, flex-end);
-  min-height: 80vh;
   .title-home,
   .button-explore {
     width: 50%;
@@ -65,8 +63,8 @@
         color: #000;
       }
       &:hover {
-          transform: scale(1.25);
-          box-shadow: 0px 0px 15px rgb(255, 255, 255);
+        transform: scale(1.25);
+        box-shadow: 0px 0px 15px rgb(255, 255, 255);
       }
     }
   }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HomeComponent = () => {
   return (
-    <div className="home">
+    <div className="home wrapper">
       <div className="title-home">
         <h1>
           <span className="title">

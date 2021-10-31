@@ -10,18 +10,17 @@ import TechComponent from "./technology";
 import "../scss/index.scss";
 
 const AppComponent = () => {
-  const [destination, setDestination] = useState(null);
-  const [crew, setCrew] = useState(null);
-  const [technology, setTechnology] = useState(null);
+  let destinations;
+  const [datas, setDatas] = useState(null);
   const URL =
     "https://raw.githubusercontent.com/Fernando0654/FEM_1_Tip_Calculator/main/data_fem_13.json";
   useEffect(async () => {
     const response = await fetch(URL);
     const data = await response.json();
-    setDestination(data.destinations);
-    setCrew(data.crew);
-    setTechnology(data.technology);
+    setDatas(data);
+    console.log(data)
   }, []);
+
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
   return (
@@ -31,13 +30,13 @@ const AppComponent = () => {
         <HomeComponent />
       </Route>
       <Route path="/destination">
-        <DestinationComponent data={destination} />
+        <DestinationComponent data={datas} />
       </Route>
       <Route path="/crew">
-        <CrewComponent data={crew} />
+        <CrewComponent data={""} />
       </Route>
       <Route path="/technology">
-        <TechComponent data={technology} />
+        <TechComponent data={""} />
       </Route>
     </div>
   );

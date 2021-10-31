@@ -1,9 +1,4 @@
-// Barlow Condensed /regular - bold/
-
-// Bellefair
-
-// Barlow
-
+@use "./util/mixins" as mixin;
 body {
     margin: 0;
     padding: 0;
@@ -38,3 +33,8 @@ a {
 .main.technology {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
 }
+
+.wrapper {
+    @include mixin.displayFlex(row, center, flex-end);
+    min-height: 80vh;
+  }
