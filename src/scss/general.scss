@@ -1,40 +1,76 @@
 @use "./util/mixins" as mixin;
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
 }
 
-ol, li {
-    list-style: none;
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+body::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+ol,
+li {
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .main {
-    background-image: url(../assets/home/background-home-desktop.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    transition: 0.5s ease;
+  background-image: url(../assets/home/background-home-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  transition: 0.5s ease;
 }
 
 .main.destination {
-    background-image: url(../assets/destination/background-destination-desktop.jpg);
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
 }
 
 .main.crew {
-    background-image: url(../assets/crew/background-crew-desktop.jpg);
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
 }
 
 .main.technology {
-    background-image: url(../assets/technology/background-technology-desktop.jpg);
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
 }
 
 .wrapper {
-    @include mixin.displayFlex(row, center, flex-end);
-    min-height: 80vh;
-  }
+  @include mixin.displayFlex(row, start, flex-end);
+  min-height: 80vh;
+}

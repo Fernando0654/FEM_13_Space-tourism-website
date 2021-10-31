@@ -1,11 +1,102 @@
 @use "../util/mixins" as mixin;
 .destination {
+  .destin {
+    @include mixin.displayFlex(row, center, center);
+    width: 75%;
+    margin: auto;
+    min-height: 75vh;
+    overflow: hidden;
     .title-img {
-        width: 50%;
+      @include mixin.displayFlex(column, start, center);
+      width: 50%;
+      padding: 1em;
+      h1 {
+        color: #fff;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 500;
+        font-size: 1.8vw;
+        padding: 0.5em;
+        span {
+          padding-right: 0.5em;
+          color: rgb(112, 89, 89);
+        }
+      }
+      img {
+        width: 90%;
+        padding: 2em;
+        animation: rotate 50s infinite linear;
+      }
     }
     .wrapper-slider {
-        @include mixin.displayFlex(column, center, center);
-        width: 50%;
-        color: #fff;
+      display: inline-block;
+      width: 40%;
+      padding: 2em;
+      margin-top: -2em;
+      color: #fff;
+      .header-slider {
+        @include mixin.displayFlex(row, center, flex-start);
+        button {
+          display: block;
+          padding: 0.5em;
+          background-color: transparent;
+          border: none;
+          font-family: "Barlow Condensed", sans-serif;
+          font-weight: 300;
+          font-size: 1.2vw;
+          color: rgba(255, 255, 255, 0.849);
+          cursor: pointer;
+          transition: 0.5s ease;
+          &:hover {
+            border-bottom: 2px solid #fff !important;
+          }
+        }
+      }
+      .slider {
+        .content-slider {
+          display: block;
+          h1 {
+            font-family: "Bellefair", serif;
+            font-weight: 500;
+            font-size: 5vw;
+            color: rgb(255, 255, 255);
+            margin: 0;
+          }
+          p {
+            font-family: "Barlow", sans-serif;
+            font-size: 1.1vw;
+            color: rgba(255, 255, 255, 0.89);
+            line-height: 2;
+            text-align: justify;
+          }
+          .info-slider {
+            @include mixin.displayFlex(row, center, center);
+            .info-box {
+              display: block;
+              width: 50%;
+              padding: 1em;
+              h2 {
+                font-size: 1vw;
+                font-family: "Barlow Condensed", sans-serif;
+                font-weight: 500;
+                color: rgba(255, 255, 255, 0.815);
+              }
+              span {
+                font-size: 1.7vw;
+                font-family: "Bellefair", sans-serif;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }

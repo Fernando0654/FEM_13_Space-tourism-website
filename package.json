@@ -10,6 +10,7 @@
   "author": "FernandoFeN",
   "license": "ISC",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.3.0"
