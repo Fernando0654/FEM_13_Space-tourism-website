@@ -72,8 +72,18 @@ a {
 
 .wrapper {
   @include mixin.displayFlex(row, start, flex-end);
+  animation: appear 1s ease;
 }
 
 .glide__bullet--active {
   border-bottom: 2px solid white !important;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
