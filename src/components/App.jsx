@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Route, useLocation } from "react-router-dom";
 // Components
 import NavbarComponent from "./navbar";
@@ -10,17 +10,19 @@ import TechComponent from "./technology";
 import "../scss/index.scss";
 
 const AppComponent = () => {
-  let destinations;
-  const [datas, setDatas] = useState(null);
   const URL =
     "https://raw.githubusercontent.com/Fernando0654/FEM_1_Tip_Calculator/main/data_fem_13.json";
   useEffect(async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setDatas(data);
-    console.log(data)
+    // const response = await fetch(URL);
+    // const data = await response.json();
+    // setDatas(data);
   }, []);
 
+  const getData = async () => {
+    const response = await fetch(URL);
+    const data = await response.json();
+    return data;
+  };
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
   return (
@@ -30,10 +32,10 @@ const AppComponent = () => {
         <HomeComponent />
       </Route>
       <Route path="/destination">
-        <DestinationComponent data={datas} />
+        <DestinationComponent data={getData()} />
       </Route>
       <Route path="/crew">
-        <CrewComponent data={""} />
+        <CrewComponent data={getData()} />
       </Route>
       <Route path="/technology">
         <TechComponent data={""} />
