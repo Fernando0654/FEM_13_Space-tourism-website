@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // GLIDE
 import "@glidejs/glide/src/assets/sass/glide.core.scss";
-import "@glidejs/glide/src/assets/sass/glide.theme.scss";
 import Glide from "@glidejs/glide";
 // IMG's
 import img_0 from "../assets/destination/image-moon.png";
@@ -45,7 +44,7 @@ const DestinationComponent = ({ data }) => {
             <ul className="glide__slides">
               {destinations.map((item, index) => (
                 <li className="glide__slide" key={index}>
-                  <div className="destin">
+                  <div className="content destin">
                     <div className="title-img">
                       <h1>
                         <span>0 1 </span> P I C K&nbsp;&nbsp;&nbsp;Y O U
@@ -54,47 +53,11 @@ const DestinationComponent = ({ data }) => {
                       <img src={imgIndex(index)} alt={item.name} />
                     </div>
                     <div className="wrapper-slider">
-                      <div className="header-slider">
-                        <button
-                          style={
-                            index === 0
-                              ? { borderBottom: "2px solid #fff" }
-                              : { border: "2px solid transparent" }
-                          }
-                          onClick={() => glide.go("=0")}
-                        >
-                          M O O N
-                        </button>
-                        <button
-                          style={
-                            index === 1
-                              ? { borderBottom: "2px solid #fff" }
-                              : { border: "2px solid transparent" }
-                          }
-                          onClick={() => glide.go("=1")}
-                        >
-                          M A R S
-                        </button>
-                        <button
-                          style={
-                            index === 2
-                              ? { borderBottom: "2px solid #fff" }
-                              : { border: "2px solid transparent" }
-                          }
-                          onClick={() => glide.go("=2")}
-                        >
-                          E U R O P A
-                        </button>
-                        <button
-                          style={
-                            index === 3
-                              ? { borderBottom: "2px solid #fff" }
-                              : { border: "2px solid transparent" }
-                          }
-                          onClick={() => glide.go("=3")}
-                        >
-                          T I T A N
-                        </button>
+                      <div className="header-slider" data-glide-el="controls[nav]">
+                        <button data-glide-dir="=0">M O O N</button>
+                        <button data-glide-dir="=1">M A R S</button>
+                        <button data-glide-dir="=2">E U R O P A</button>
+                        <button data-glide-dir="=3">T I T A N</button>
                       </div>
                       <div className="slider">
                         <div className="content-slider">

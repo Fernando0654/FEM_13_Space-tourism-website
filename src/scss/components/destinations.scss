@@ -1,11 +1,10 @@
 @use "../util/mixins" as mixin;
-.destination {
-  .destin {
+.wrapper {
+  .content {
     @include mixin.displayFlex(row, center, center);
     width: 75%;
     margin: auto;
     min-height: 75vh;
-    overflow: hidden;
     .title-img {
       @include mixin.displayFlex(column, start, center);
       width: 50%;
@@ -46,9 +45,6 @@
           color: rgba(255, 255, 255, 0.849);
           cursor: pointer;
           transition: 0.5s ease;
-          &:hover {
-            border-bottom: 2px solid #fff !important;
-          }
         }
       }
       .slider {
@@ -67,6 +63,11 @@
             color: rgba(255, 255, 255, 0.89);
             line-height: 2;
             text-align: justify;
+          }
+          hr {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid gray;
           }
           .info-slider {
             @include mixin.displayFlex(row, center, center);

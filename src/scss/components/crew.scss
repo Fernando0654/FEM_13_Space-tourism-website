@@ -1,0 +1,62 @@
+@use "../util/mixins.scss" as mix;
+.content {
+  &.crew {
+    .title-img {
+      h1 {
+        margin-bottom: 7vw;
+      }
+      .header-slider {
+        h2 {
+          font-family: "Bellefair", serif;
+          color: rgb(172, 142, 142);
+          font-weight: lighter;
+          padding: 0em;
+        }
+      }
+      .slider {
+        .content-slider {
+          h1 {
+            font-family: "Bellefair", serif;
+            margin: 0;
+            padding: 0em;
+            font-size: 3.1vw;
+          }
+          p {
+            font-family: "Barlow", sans-serif;
+            color: rgba(255, 255, 255, 0.707);
+            line-height: 2;
+            margin-bottom: 7vw;
+          }
+          .bullets {
+            @include mix.displayFlex(row, center, flex-start);
+            width: 100%;
+            gap: 1em;
+            button {
+              width: 10px;
+              height: 12px;
+              border-radius: 150px;
+              border: none;
+              transition: 0.5s ease;
+              cursor: pointer;
+              &:hover {
+                transform: scale(1.5);
+                background-color: rgb(201, 185, 185);
+              }
+            }
+            & .glide__bullet--active {
+              transform: scale(1.2);
+              background-color: rgb(49, 146, 142);
+              border: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.crew .wrapper-slider {
+    img {
+      width: 100%;
+      margin-bottom: -12vw;
+    }
+  }
+}

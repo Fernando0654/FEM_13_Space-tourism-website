@@ -72,5 +72,8 @@ a {
 
 .wrapper {
   @include mixin.displayFlex(row, start, flex-end);
-  min-height: 80vh;
+}
+
+.glide__bullet--active {
+  border-bottom: 2px solid white !important;
 }
