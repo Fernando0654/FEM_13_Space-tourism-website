@@ -1,0 +1,82 @@
+@use "../util/mixins" as mix;
+
+.technology-wrapper {
+  width: 90%;
+  margin-left: 10%;
+  min-height: 70vh;
+  .technology-header {
+    h1 {
+      color: #fff;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 500;
+      font-size: 1.8vw;
+      padding: 0.5em;
+      span {
+        padding-right: 0.5em;
+        color: rgb(112, 89, 89);
+      }
+    }
+  }
+  .technology-body {
+    @include mix.displayFlex(row, center, center);
+    .control-slider {
+      @include mix.displayFlex(column, flex-start, center);
+      width: 20%;
+      gap: 1.5em;
+      button {
+        display: block;
+        width: 90px;
+        height: 90px;
+        background-color: transparent;
+        font-family: "Bellefair", serif;
+        color: #fff;
+        font-size: 2.5vw;
+        border: 1px solid gray;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: 0.5s ease;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+      }
+    }
+    .technology-slider {
+      @include mix.displayFlex(column, center, center);
+      width: 80%;
+      .technology-slider_body {
+        @include mix.displayFlex(row, center, flex-end);
+        .tech-info {
+            display: block;
+            width: 50%;
+            color: #fff;
+            span {
+                font-family: "Barlow Condensed", sans-serif;
+                color: rgb(172, 142, 142);
+                font-weight: lighter;
+            }
+            h1 {
+                font-family: "Bellefair", serif;
+                font-size: 4vw;
+                color: #fff;
+                font-weight: lighter;
+            }
+            p{
+                width: 70%;
+                font-family: "Barlow", sans-serif;
+                font-size: 1.1vw;
+                line-height: 2;
+                color: rgba(255, 255, 255, 0.877);
+                padding: 1em;
+            }
+        }
+        .tech-img {
+          width: 50%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

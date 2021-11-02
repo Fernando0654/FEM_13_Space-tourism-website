@@ -33,7 +33,7 @@ const AppComponent = () => {
         <CrewComponent data={getData()} />
       </Route>
       <Route path="/technology">
-        <TechComponent data={""} />
+        <TechComponent data={getData()} />
       </Route>
     </div>
   );
