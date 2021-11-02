@@ -21,7 +21,7 @@
     @include mix.displayFlex(row, center, center);
     .control-slider {
       @include mix.displayFlex(column, flex-start, center);
-      width: 20%;
+      width: 10%;
       gap: 1.5em;
       button {
         display: block;
@@ -36,39 +36,42 @@
         cursor: pointer;
         transition: 0.5s ease;
         &:hover {
-            background-color: #fff;
-            color: #000;
+          background-color: #fff !important;
+          color: #000;
         }
       }
     }
     .technology-slider {
       @include mix.displayFlex(column, center, center);
-      width: 80%;
+      width: 90%;
+      animation: appear 1s ease;
       .technology-slider_body {
         @include mix.displayFlex(row, center, flex-end);
+        animation: appear 1s ease;
         .tech-info {
-            display: block;
-            width: 50%;
+          display: block;
+          width: 50%;
+          color: #fff;
+          span {
+            font-family: "Barlow Condensed", sans-serif;
+            color: rgb(172, 142, 142);
+            font-weight: lighter;
+          }
+          h1 {
+            font-family: "Bellefair", serif;
+            font-size: 4vw;
             color: #fff;
-            span {
-                font-family: "Barlow Condensed", sans-serif;
-                color: rgb(172, 142, 142);
-                font-weight: lighter;
-            }
-            h1 {
-                font-family: "Bellefair", serif;
-                font-size: 4vw;
-                color: #fff;
-                font-weight: lighter;
-            }
-            p{
-                width: 70%;
-                font-family: "Barlow", sans-serif;
-                font-size: 1.1vw;
-                line-height: 2;
-                color: rgba(255, 255, 255, 0.877);
-                padding: 1em;
-            }
+            font-weight: lighter;
+            margin: 0;
+          }
+          p {
+            width: 70%;
+            font-family: "Barlow", sans-serif;
+            font-size: 1.1vw;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.877);
+            padding: 1em;
+          }
         }
         .tech-img {
           width: 50%;
@@ -78,5 +81,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

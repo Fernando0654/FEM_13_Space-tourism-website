@@ -20,9 +20,11 @@ const HomeComponent = () => {
         </p>
       </div>
       <div className="button-explore">
-        <div className="btn">
-          <Link to="/explore">E X P L O R E</Link>
-        </div>
+        <Link to="/destination">
+          <div className="btn">
+            <span>E X P L O R E</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

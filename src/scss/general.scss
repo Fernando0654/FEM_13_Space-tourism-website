@@ -72,7 +72,7 @@ a {
 
 .wrapper {
   @include mixin.displayFlex(row, start, flex-end);
-  animation: appear 1s ease;
+  animation: appearBottom 1s ease;
 }
 
 .glide__bullet--active {
@@ -85,5 +85,14 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes appearBottom {
+  from {
+    margin-top: 100vh;
+  }
+  to {
+    margin-top: 0;
   }
 }
