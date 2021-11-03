@@ -8,6 +8,11 @@ const NavbarComponent = ({ currentRoute }) => {
   const [isShowing, setIsShowing] = useState(false);
   return (
     <header>
+      <div
+        className="navbar-outside"
+        style={isShowing ? { display: "block" } : { display: "none" }}
+        onClick={() => setIsShowing(!isShowing)}
+      ></div>
       <div className="logo">
         <img src={icono} alt="" />
         <hr />

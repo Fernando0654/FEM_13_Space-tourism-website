@@ -84,6 +84,15 @@ header {
 @media (max-width: 450px) {
   header {
     width: auto;
+    .navbar-outside {
+      display: block;
+      position: fixed;
+      width: 100%;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.344);
+      top: 0;
+      z-index: 3;
+    }
     .logo {
       width: 30%;
       padding-left: 0;
@@ -99,6 +108,7 @@ header {
       display: flex !important;
       width: 50%;
       margin-top: 2em;
+      z-index: 5;
     }
     .navbar {
       width: 60%;

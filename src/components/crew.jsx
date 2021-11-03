@@ -8,6 +8,8 @@ import img_0 from "../assets/crew/image-douglas-hurley.png";
 import img_1 from "../assets/crew/image-mark-shuttleworth.png";
 import img_2 from "../assets/crew/image-victor-glover.png";
 import img_3 from "../assets/crew/image-anousheh-ansari.png";
+// ICON
+import loadingIcon from "../assets/shared/loading.png";
 
 const CrewComponent = ({ data }) => {
   const [crew, setCrew] = useState(null);
@@ -60,8 +62,8 @@ const CrewComponent = ({ data }) => {
                           <h1>{item.name.toUpperCase()}</h1>
                           <p>{item.bio}</p>
                           <div className="mobile-slider-header">
-                          <h2>{item.role.toUpperCase()}</h2>
-                          <h3>{item.name.toUpperCase()}</h3>
+                            <h2>{item.role.toUpperCase()}</h2>
+                            <h3>{item.name.toUpperCase()}</h3>
                           </div>
                           <div
                             className="bullets"
@@ -72,7 +74,6 @@ const CrewComponent = ({ data }) => {
                             <button data-glide-dir="=2"></button>
                             <button data-glide-dir="=3"></button>
                           </div>
-                          
                         </div>
                       </div>
                     </div>
@@ -86,7 +87,9 @@ const CrewComponent = ({ data }) => {
           </div>
         </div>
       ) : (
-        <span>Loading...</span>
+        <span className="loading">
+          <img src={loadingIcon} alt="" />
+        </span>
       )}
     </div>
   );

@@ -7,6 +7,8 @@ import img_0 from "../assets/destination/image-moon.png";
 import img_1 from "../assets/destination/image-mars.png";
 import img_2 from "../assets/destination/image-europa.png";
 import img_3 from "../assets/destination/image-titan.png";
+// ICON
+import loadingIcon from "../assets/shared/loading.png";
 
 const DestinationComponent = ({ data }) => {
   const [destinations, setDestinations] = useState(null);
@@ -84,7 +86,7 @@ const DestinationComponent = ({ data }) => {
           </div>
         </div>
       ) : (
-        <span>Loading...</span>
+        <span className="loading"><img src={loadingIcon} alt="" /></span>
       )}
     </div>
   );
