@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 // IMG'S
 import img_0 from "../assets/technology/image-launch-vehicle-portrait.jpg";
-import img_1 from "../assets/technology/image-space-capsule-portrait.jpg";
-import img_2 from "../assets/technology/image-spaceport-portrait.jpg";
+import img_1 from "../assets/technology/image-spaceport-portrait.jpg";
+import img_2 from "../assets/technology/image-space-capsule-portrait.jpg";
+import img_3 from "../assets/technology/image-launch-vehicle-landscape.jpg";
+import img_4 from "../assets/technology/image-spaceport-landscape.jpg";
+import img_5 from "../assets/technology/image-space-capsule-landscape.jpg";
 
 const SliderComponent = ({ current, index, setItem }) => {
   const imgIndex = (index) => {
@@ -17,6 +20,16 @@ const SliderComponent = ({ current, index, setItem }) => {
         return false;
     }
   };
+  const imgIndexResponsive = (index) => {
+    switch (index) {
+      case 0:
+        return img_3;
+      case 1:
+        return img_4;
+      case 2:
+        return img_5;
+    }
+  };
   return (
     <div className="technology-wrapper">
       <div className="technology-header">
@@ -27,7 +40,8 @@ const SliderComponent = ({ current, index, setItem }) => {
       </div>
       <div className="technology-body">
         <div className="tech-img">
-          <img src={imgIndex(index)} alt="" />
+          <img src={imgIndex(index)} alt="" className="desktop" />
+          <img src={imgIndexResponsive(index)} alt="" className="tablet" />
         </div>
         <div className="control-slider">
           <button

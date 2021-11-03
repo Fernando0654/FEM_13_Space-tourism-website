@@ -49,6 +49,14 @@ a {
   text-decoration: none;
 }
 
+.tablet {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
 .main {
   background-image: url(../assets/home/background-home-desktop.jpg);
   background-position: center;
@@ -107,6 +115,12 @@ a {
 }
 
 @media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
   .wrapper {
     flex-direction: column;
   }

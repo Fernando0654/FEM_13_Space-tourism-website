@@ -90,67 +90,43 @@
     }
     .technology-body {
       flex-direction: column;
+      .tech-img {
+        width: 100%;
+      }
       .control-slider {
-        @include mix.displayFlex(column, flex-start, center);
-        width: 10%;
+        margin-top: 4em;
+        width: 100%;
+        flex-direction: row;
         position: initial;
-        gap: 1.5em;
         button {
-          display: block;
-          width: 90px;
-          height: 90px;
-          background-color: transparent;
-          font-family: "Bellefair", serif;
-          color: #fff;
-          font-size: 2.5vw;
-          border: 1px solid gray;
-          border-radius: 100%;
-          cursor: pointer;
-          transition: 0.5s ease;
-          &:hover {
-            background-color: #fff !important;
-            color: #000;
-          }
+          width: 70px;
+          height: 70px;
         }
       }
-      .technology-slider {
-        @include mix.displayFlex(column, center, center);
-        width: 90%;
-        animation: appear 1s ease;
-        .technology-slider_body {
-          @include mix.displayFlex(row, center, flex-end);
-          animation: appear 1s ease;
-          .tech-info {
-            display: block;
-            width: 50%;
-            color: #fff;
-            span {
-              font-family: "Barlow Condensed", sans-serif;
-              color: rgb(172, 142, 142);
-              font-weight: lighter;
-            }
-            h1 {
-              font-family: "Bellefair", serif;
-              font-size: 4vw;
-              color: #fff;
-              font-weight: lighter;
-              margin: 0;
-            }
-            p {
-              width: 70%;
-              font-family: "Barlow", sans-serif;
-              font-size: 1.1vw;
-              line-height: 2;
-              color: rgba(255, 255, 255, 0.877);
-              padding: 1em;
-            }
-          }
-          .tech-img {
-            width: 50%;
-            img {
-              width: 100%;
-            }
-          }
+      .tech-info {
+        width: 70%;
+        margin-top: 3em;
+        span {
+          display: block;
+          width: 100%;
+          text-align: center;
+          color: rgb(211, 202, 202);
+          font-size: 3vw;
+        }
+        h1 {
+          display: block;
+          width: 100%;
+          font-size: 7vw;
+          margin: 0em;
+          margin-top: 0.5em;
+          text-align: center;
+        }
+        p {
+          display: block;
+          width: 100%;
+          font-size: 2.5vw;
+          padding: 0em;
+          text-align: center;
         }
       }
     }
