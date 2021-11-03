@@ -18,10 +18,12 @@
     }
   }
   .technology-body {
-    @include mix.displayFlex(row, center, center);
+    @include mix.displayFlex(row-reverse, center, inherit);
     .control-slider {
       @include mix.displayFlex(column, flex-start, center);
+      position: absolute;
       width: 10%;
+      left: 10%;
       gap: 1.5em;
       button {
         display: block;
@@ -41,54 +43,116 @@
         }
       }
     }
-    .technology-slider {
-      @include mix.displayFlex(column, center, center);
-      width: 90%;
+    .tech-img {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+    .tech-info {
+      display: block;
+      width: 45%;
+      color: #fff;
       animation: appear 1s ease;
-      .technology-slider_body {
-        @include mix.displayFlex(row, center, flex-end);
-        animation: appear 1s ease;
-        .tech-info {
-          display: block;
-          width: 50%;
-          color: #fff;
-          span {
-            font-family: "Barlow Condensed", sans-serif;
-            color: rgb(172, 142, 142);
-            font-weight: lighter;
-          }
-          h1 {
-            font-family: "Bellefair", serif;
-            font-size: 4vw;
-            color: #fff;
-            font-weight: lighter;
-            margin: 0;
-          }
-          p {
-            width: 70%;
-            font-family: "Barlow", sans-serif;
-            font-size: 1.1vw;
-            line-height: 2;
-            color: rgba(255, 255, 255, 0.877);
-            padding: 1em;
-          }
-        }
-        .tech-img {
-          width: 50%;
-          img {
-            width: 100%;
-          }
-        }
+      span {
+        font-family: "Barlow Condensed", sans-serif;
+        color: rgb(172, 142, 142);
+        font-weight: lighter;
+      }
+      h1 {
+        font-family: "Bellefair", serif;
+        font-size: 4vw;
+        color: #fff;
+        font-weight: lighter;
+        margin: 0;
+      }
+      p {
+        width: 70%;
+        font-family: "Barlow", sans-serif;
+        font-size: 1.1vw;
+        line-height: 2;
+        color: rgba(255, 255, 255, 0.877);
+        padding: 1em;
       }
     }
   }
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@media (max-width: 768px) {
+  .technology-wrapper {
+    width: 100%;
+    margin-left: 0;
+    min-height: inherit;
+    .technology-header {
+      h1 {
+        font-size: 2.5vw;
+      }
+    }
+    .technology-body {
+      flex-direction: column;
+      .control-slider {
+        @include mix.displayFlex(column, flex-start, center);
+        width: 10%;
+        position: initial;
+        gap: 1.5em;
+        button {
+          display: block;
+          width: 90px;
+          height: 90px;
+          background-color: transparent;
+          font-family: "Bellefair", serif;
+          color: #fff;
+          font-size: 2.5vw;
+          border: 1px solid gray;
+          border-radius: 100%;
+          cursor: pointer;
+          transition: 0.5s ease;
+          &:hover {
+            background-color: #fff !important;
+            color: #000;
+          }
+        }
+      }
+      .technology-slider {
+        @include mix.displayFlex(column, center, center);
+        width: 90%;
+        animation: appear 1s ease;
+        .technology-slider_body {
+          @include mix.displayFlex(row, center, flex-end);
+          animation: appear 1s ease;
+          .tech-info {
+            display: block;
+            width: 50%;
+            color: #fff;
+            span {
+              font-family: "Barlow Condensed", sans-serif;
+              color: rgb(172, 142, 142);
+              font-weight: lighter;
+            }
+            h1 {
+              font-family: "Bellefair", serif;
+              font-size: 4vw;
+              color: #fff;
+              font-weight: lighter;
+              margin: 0;
+            }
+            p {
+              width: 70%;
+              font-family: "Barlow", sans-serif;
+              font-size: 1.1vw;
+              line-height: 2;
+              color: rgba(255, 255, 255, 0.877);
+              padding: 1em;
+            }
+          }
+          .tech-img {
+            width: 50%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 }

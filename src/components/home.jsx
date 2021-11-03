@@ -10,7 +10,7 @@ const HomeComponent = () => {
             S O, Y O U&nbsp;&nbsp;W A N T&nbsp;&nbsp;T O&nbsp;&nbsp;T R A V E
             L&nbsp;&nbsp;T O
           </span>
-          <span className="subtitle">S P A C E</span>
+          <span className="subtitle">SPACE</span>
         </h1>
         <p>
           Let’s face it; if you want to go to space, you might as well genuinely

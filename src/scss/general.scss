@@ -96,3 +96,32 @@ a {
     margin-top: 0;
   }
 }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .main {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+  .main.destination {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+  
+  .main.crew {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+  
+  .main.technology {
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+  }
+}

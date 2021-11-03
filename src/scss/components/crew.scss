@@ -60,3 +60,37 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .content {
+    &.crew {
+      .title-img {
+        .header-slider {
+          width: 100%;
+          h2 {
+            text-align: center;
+          }
+        }
+        .slider {
+          .content-slider {
+            h1 {
+              text-align: center;
+              font-size: 7vw;
+            }
+            p {
+              width: 70%;
+              margin: auto;
+              text-align: center;
+              font-size: 2vw;
+            }
+            .bullets {
+              padding-top: 2em;
+              padding-bottom: 2em;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

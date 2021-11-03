@@ -26,6 +26,9 @@ const SliderComponent = ({ current, index, setItem }) => {
         </h1>
       </div>
       <div className="technology-body">
+        <div className="tech-img">
+          <img src={imgIndex(index)} alt="" />
+        </div>
         <div className="control-slider">
           <button
             onClick={() => setItem(0)}
@@ -58,20 +61,13 @@ const SliderComponent = ({ current, index, setItem }) => {
             3
           </button>
         </div>
-        <div className="technology-slider">
-          {current.map((item) => (
-            <div className="technology-slider_body" key={index}>
-              <div className="tech-info">
-                <span>T H E&nbsp;&nbsp;&nbsp;T E R M I N O L O G Y . . .</span>
-                <h1>{item.name.toUpperCase()}</h1>
-                <p>{item.description}</p>
-              </div>
-              <div className="tech-img">
-                <img src={imgIndex(index)} alt={item.name} />
-              </div>
-            </div>
-          ))}
-        </div>
+        {current.map((item) => (
+          <div className="tech-info" key={index}>
+            <span>T H E&nbsp;&nbsp;&nbsp;T E R M I N O L O G Y . . .</span>
+            <h1>{item.name.toUpperCase()}</h1>
+            <p>{item.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
