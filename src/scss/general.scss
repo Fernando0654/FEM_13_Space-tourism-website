@@ -81,6 +81,7 @@ a {
 .wrapper {
   @include mixin.displayFlex(row, start, flex-end);
   animation: appearBottom 1s ease;
+  z-index: 4;
 }
 
 .glide__bullet--active {

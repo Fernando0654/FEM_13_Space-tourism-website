@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import icono from "../assets/shared/logo.svg";
+import closeIcon from "../assets/shared/icon-close.svg";
+import openIcon from "../assets/shared/icon-hamburger.svg";
 import { Link } from "react-router-dom";
 
 const NavbarComponent = ({ currentRoute }) => {
+  const [isShowing, setIsShowing] = useState(false);
   return (
     <header>
       <div className="logo">
         <img src={icono} alt="" />
         <hr />
       </div>
-      <ul className="navbar">
+      <div
+        className="bars-navbar"
+        style={isShowing ? { display: "none" } : { display: "flex" }}
+      >
+        <img src={openIcon} alt="" onClick={() => setIsShowing(!isShowing)} />
+      </div>
+      <ul
+        className="navbar"
+        style={isShowing ? { right: "0" } : { right: "-50vh" }}
+      >
+        <div className="close">
+          <img
+            src={closeIcon}
+            alt=""
+            onClick={() => setIsShowing(!isShowing)}
+          />
+        </div>
         <li>
           <Link
             to="/"

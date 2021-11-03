@@ -49,6 +49,9 @@ const CrewComponent = ({ data }) => {
                         <span>0 2 </span> M E E T &nbsp;&nbsp;&nbsp;Y O U R
                         &nbsp;&nbsp;&nbsp;C R E W
                       </h1>
+                      <div className="img-mobile">
+                        <img src={imgIndex(index)} alt="" />
+                      </div>
                       <div className="header-slider">
                         <h2>{item.role.toUpperCase()}</h2>
                       </div>
@@ -56,12 +59,20 @@ const CrewComponent = ({ data }) => {
                         <div className="content-slider">
                           <h1>{item.name.toUpperCase()}</h1>
                           <p>{item.bio}</p>
-                          <div className="bullets" data-glide-el="controls[nav]">
+                          <div className="mobile-slider-header">
+                          <h2>{item.role.toUpperCase()}</h2>
+                          <h3>{item.name.toUpperCase()}</h3>
+                          </div>
+                          <div
+                            className="bullets"
+                            data-glide-el="controls[nav]"
+                          >
                             <button data-glide-dir="=0"></button>
                             <button data-glide-dir="=1"></button>
                             <button data-glide-dir="=2"></button>
                             <button data-glide-dir="=3"></button>
                           </div>
+                          
                         </div>
                       </div>
                     </div>

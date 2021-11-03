@@ -112,3 +112,28 @@
     }
   }
 }
+
+// MOBILE 450px
+
+@media (max-width: 450px) {
+  .home {
+    .title-home {
+      h1 {
+        width: 80%;
+        .title {
+          font-size: 4.5vw;
+        }
+        .subtitle {
+          font-size: 23vw;
+        }
+      }
+      p {
+        width: 80%;
+        font-size: 4vw;
+      }
+    }
+    .button-explore {
+      margin-bottom: 3em;
+    }
+  }
+}

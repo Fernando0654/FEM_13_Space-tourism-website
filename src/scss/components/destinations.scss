@@ -151,3 +151,48 @@
     }
   }
 }
+
+@media (max-width: 450px) {
+  .wrapper {
+    .content {
+      .title-img {
+        h1 {
+          width: 100%;
+          text-align: center;
+          font-size: 5vw;
+        }
+        img {
+          width: 55%;
+          padding: 0;
+        }
+      }
+      .wrapper-slider {
+        width: 100%;
+        .header-slider {
+          button {
+            font-size: 4.3vw;
+          }
+        }
+        .slider {
+          .content-slider {
+            p {
+              font-size: 3.4vw;
+            }
+            .info-slider {
+              @include mixin.displayFlex(column, center, center);
+              .info-box {
+                width: 100%;
+                h2 {
+                  font-size: 4vw;
+                }
+                span {
+                  font-size: 8vw;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
